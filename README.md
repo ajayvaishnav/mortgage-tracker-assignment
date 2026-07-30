@@ -8,7 +8,6 @@ An production-ready MVP backend system for tracking mortgage principal reduction
 - Spring Data JPA
 - H2 In-Memory Database
 - Springdoc OpenAPI (Swagger UI)
-- Docker
 
 ## 🛠️ How To Run Locally
 
