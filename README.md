@@ -76,3 +76,7 @@ Once the service boots up, access interactive document sandboxes to execute live
   }
 ]
 ```
+## 📬 Postman Collection
+
+A pre-configured Postman collection is included in the root directory to help you quickly test the API endpoints and check edge-case error routines.
+ing_mortgage_tracker.postman_collections
