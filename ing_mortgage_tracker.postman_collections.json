@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+		"name": "ING Mortgage Tracker API",
+		"description": "Postman collection to validate the Mortgage Payment Tracker backend MVP application endpoints and error routines.",
+		"schema": "https://getpostman.com"
+	},
+	"item": [
+		{
+			"name": "Record Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"paymentDate\": \"2026-07-30\",\n    \"amount\": 300.00\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/mortgages/1/payments",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["mortgages", "1", "payments"]
+				}
+			}
+		},
+		{
+			"name": "Get Payment Breakdown",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mortgages/1/payments",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["mortgages", "1", "payments"]
+				}
+			}
+		},
+		{
+			"name": "Get Future Balance Projections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mortgages/1/projection?months=3",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["mortgages", "1", "projection"],
+					"query": [
+						{
+							"key": "months",
+							"value": "3"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "Edge Case - Non-Existent Mortgage Error Handler",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mortgages/999/payments",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["mortgages", "999", "payments"]
+				}
+			}
+		}
+	]
+}
