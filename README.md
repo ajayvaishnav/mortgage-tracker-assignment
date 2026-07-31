@@ -1,6 +1,6 @@
-# ING Mortgage Payment Tracker Service (MVP)
+# ING Mortgage Payment Tracker Service
 
-An production-ready MVP backend system for tracking mortgage principal reductions and simulating upcoming multi-month amortization projections.
+Backend system for tracking mortgage principal reductions and simulating upcoming multi-month amortization projections.
 
 ## 🚀 Tech Stack
 - Java 17
